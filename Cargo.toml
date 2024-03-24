@@ -1,0 +1,25 @@
+[package]
+name = "tiny-yellow"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+
+[[bin]]
+name = "server"
+path = "src/server.rs"
+
+[[bin]]
+name = "client"
+path = "src/client.rs"
+
+[dependencies]
+lazy_static = "1.4.0"
+rand = "0.8.5"
+rayon = "1.9.0"
+reqwest = { version = "0.12.1", features = ["json"] }
+serde = { version = "1.0.197", features = ["derive"] }
+
+tokio = { version = "1.36.0", features = ["full"] }
+warp = "0.3.6"
